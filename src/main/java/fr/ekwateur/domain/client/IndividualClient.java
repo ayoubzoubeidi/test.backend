@@ -1,5 +1,6 @@
 package fr.ekwateur.domain.client;
 
+import fr.ekwateur.domain.consumption.EnergyConsumption;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +14,13 @@ public class IndividualClient extends Client {
 
     public IndividualClient(String clientReference, Civilite civilite, String firstName, String lastName) {
         super(clientReference, ClientType.INDIVIDUAL);
+        this.civilite = civilite;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public IndividualClient(String clientReference, Civilite civilite, String firstName, String lastName, EnergyConsumption energyConsumption) {
+        super(clientReference, ClientType.INDIVIDUAL, energyConsumption);
         this.civilite = civilite;
         this.firstName = firstName;
         this.lastName = lastName;
