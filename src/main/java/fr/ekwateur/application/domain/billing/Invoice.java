@@ -5,7 +5,6 @@ import fr.ekwateur.application.domain.consumption.EnergyConsumed;
 import fr.ekwateur.application.port.out.EnergyTariffProvider;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.math.BigDecimal;
 import java.time.temporal.Temporal;
 

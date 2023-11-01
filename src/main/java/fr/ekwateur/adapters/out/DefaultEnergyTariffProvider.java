@@ -5,7 +5,6 @@ import fr.ekwateur.application.port.out.EnergyTariffProvider;
 import fr.ekwateur.application.domain.client.Client;
 import fr.ekwateur.application.domain.client.ClientType;
 import fr.ekwateur.application.domain.client.ProClient;
-
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;

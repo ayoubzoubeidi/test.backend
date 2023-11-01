@@ -25,7 +25,7 @@ public abstract class Client {
         this.energyConsumption = energyConsumption;
     }
 
-    public Client(String clientReference, ClientType clientType) {
+    protected Client(String clientReference, ClientType clientType) {
         this(clientReference, clientType, new EnergyConsumption());
     }
 }

@@ -6,7 +6,6 @@ import fr.ekwateur.application.domain.client.Client;
 import fr.ekwateur.application.domain.client.IndividualClient;
 import fr.ekwateur.application.domain.client.ProClient;
 import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
 
 import static fr.ekwateur.adapters.out.DefaultEnergyTariffProvider.*;
