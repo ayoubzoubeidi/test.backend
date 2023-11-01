@@ -3,23 +3,15 @@ package fr.ekwateur.domain.consumption;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.List;
 
+import static fr.ekwateur.TestData.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class EnergyConsumptionTest {
 
     private EnergyConsumption energyConsumption;
-    private static final YearMonth FEBRUARY_2023 = YearMonth.of(2023, 2);
-    private static final double FEBRUARY_2023_ELECTRICITY_CONSUMPTION = 100.0d;
-    private static final double FEBRUARY_2023_GAS_CONSUMPTION = 50.0d;
-    private static final YearMonth MARCH_2023_ONLY_ELECTRICITY = YearMonth.of(2023, 3);
-    private static final double MARCH_2023_ELECTRICITY_CONSUMPTION = 80.0d;
-    private static final YearMonth APRIL_2023_ONLY_GAS = YearMonth.of(2023, 4);
-    private static final double APRIL_2023_GAS_CONSUMPTION = 40.0d;
-    private static final YearMonth NON_EXISTENT = YearMonth.of(2023, 6);
 
     @BeforeEach
     public void setUp() {

@@ -2,19 +2,10 @@ package fr.ekwateur.domain.client;
 
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
-
+import static fr.ekwateur.TestData.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ClientTest {
-
-    private static final String VALID_REFERENCE = "EKW57198516";
-    private static final String INVALID_REFERENCE = "E198516";
-    private static final String PRENOM = "Prenom";
-    private static final String NOM = "Nom";
-    private static final String SIRET = "2516516165";
-    private static final String RAISON_SOCIALE = "test raison";
-    private static final BigDecimal TURNOVER = new BigDecimal("25.20");
 
     @Test
     public void testCreateIndividualClient_WithValidInput_ShouldSucceed() {
