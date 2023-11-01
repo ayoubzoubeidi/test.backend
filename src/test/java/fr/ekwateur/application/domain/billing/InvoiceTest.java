@@ -1,17 +1,19 @@
-package fr.ekwateur.domain.billing;
+package fr.ekwateur.application.domain.billing;
 
-import fr.ekwateur.domain.client.Civilite;
-import fr.ekwateur.domain.client.Client;
-import fr.ekwateur.domain.client.IndividualClient;
-import fr.ekwateur.domain.consumption.EnergyConsumption;
+import fr.ekwateur.application.domain.client.Civilite;
+import fr.ekwateur.application.domain.client.Client;
+import fr.ekwateur.application.domain.client.IndividualClient;
+import fr.ekwateur.application.domain.consumption.EnergyConsumed;
+import fr.ekwateur.application.domain.consumption.EnergyConsumption;
+import fr.ekwateur.application.port.out.EnergyTariffProvider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.math.BigDecimal;
+import java.time.YearMonth;
 
-import static fr.ekwateur.TestData.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
@@ -26,6 +28,14 @@ class InvoiceTest {
     private Client client;
     private Invoice invoice;
 
+    public static final String VALID_REFERENCE = "EKW57198516";
+    public static final String PRENOM = "Prenom";
+    public static final String NOM = "Nom";
+    public static final EnergyConsumed RETURNED_ENERGY_CONSUMED = new EnergyConsumed(20.0d, 50.0d);
+    public static final BigDecimal RETURNED_ELECTRICITY_PRICE = new BigDecimal("20.0");
+    public static final BigDecimal RETURNED_GAS_PRICE = new BigDecimal("30.0");
+    public static final BigDecimal EXPECTED_AMOUNT = new BigDecimal("1900.0");
+    public static final YearMonth FEBRUARY_2023 = YearMonth.of(2023, 2);
     private final EnergyTariff RETURNED_ENERGY_TARIFF = new EnergyTariff(RETURNED_ELECTRICITY_PRICE, RETURNED_GAS_PRICE);
 
     @BeforeEach

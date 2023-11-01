@@ -1,7 +1,8 @@
-package fr.ekwateur.domain.billing;
+package fr.ekwateur.application.domain.billing;
 
-import fr.ekwateur.domain.client.Client;
-import fr.ekwateur.domain.consumption.EnergyConsumed;
+import fr.ekwateur.application.domain.client.Client;
+import fr.ekwateur.application.domain.consumption.EnergyConsumed;
+import fr.ekwateur.application.port.out.EnergyTariffProvider;
 import lombok.Getter;
 import lombok.Setter;
 

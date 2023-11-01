@@ -1,10 +1,10 @@
-package fr.ekwateur.domain.client;
+package fr.ekwateur.application.domain.client;
 
-import fr.ekwateur.domain.consumption.EnergyConsumption;
+import fr.ekwateur.application.domain.consumption.EnergyConsumption;
 import lombok.Getter;
 import lombok.Setter;
 
-import static fr.ekwateur.domain.Common.CLIENT_REFERENCE_REGEX;
+import java.util.regex.Pattern;
 
 @Getter
 @Setter
@@ -13,6 +13,8 @@ public abstract class Client {
     protected String clientReference;
     protected ClientType clientType;
     protected EnergyConsumption energyConsumption;
+
+    private static Pattern CLIENT_REFERENCE_REGEX = Pattern.compile("^EKW\\d{8}$");
 
     protected Client(String clientReference, ClientType clientType, EnergyConsumption energyConsumption) {
         if (!CLIENT_REFERENCE_REGEX.matcher(clientReference).matches()) {

@@ -1,6 +1,6 @@
-package fr.ekwateur.domain.client;
+package fr.ekwateur.application.domain.client;
 
-import fr.ekwateur.domain.consumption.EnergyConsumption;
+import fr.ekwateur.application.domain.consumption.EnergyConsumption;
 import lombok.Getter;
 import lombok.Setter;
 

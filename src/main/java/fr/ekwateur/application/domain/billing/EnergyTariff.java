@@ -1,4 +1,4 @@
-package fr.ekwateur.domain.billing;
+package fr.ekwateur.application.domain.billing;
 
 import java.math.BigDecimal;
 

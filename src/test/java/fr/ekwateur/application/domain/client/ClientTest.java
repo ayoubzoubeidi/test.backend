@@ -1,11 +1,19 @@
-package fr.ekwateur.domain.client;
+package fr.ekwateur.application.domain.client;
 
 import org.junit.jupiter.api.Test;
+import java.math.BigDecimal;
 
-import static fr.ekwateur.TestData.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ClientTest {
+
+    public static final String VALID_REFERENCE = "EKW57198516";
+    public static final String INVALID_REFERENCE = "E198516";
+    public static final String PRENOM = "Prenom";
+    public static final String NOM = "Nom";
+    public static final String SIRET = "2516516165";
+    public static final String RAISON_SOCIALE = "test raison";
+    public static final BigDecimal TURNOVER = new BigDecimal("25.20");
 
     @Test
     public void testCreateIndividualClient_WithValidInput_ShouldSucceed() {

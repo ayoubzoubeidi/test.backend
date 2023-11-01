@@ -1,4 +1,4 @@
-package fr.ekwateur.domain.consumption;
+package fr.ekwateur.application.domain.consumption;
 
 import lombok.Getter;
 import lombok.Setter;
